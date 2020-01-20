@@ -1,4 +1,4 @@
-package com.mycustom.example;
+package featuresJava8;
 
 import java.util.ArrayList;
 import java.util.Collections;
