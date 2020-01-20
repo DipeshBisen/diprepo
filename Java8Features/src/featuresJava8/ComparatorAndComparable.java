@@ -11,6 +11,13 @@ import java.util.List;
 //  and
 //  Collections.sort( list, Comparator )
 
+//Examples (strategies): 
+//1>Comparator<Employee> compareById = (Employee o1, Employee o2) -> o1.getId().compareTo( o2.getId() );
+
+//2>Comparator<Employee> compareByFirstName = (Employee o1, Employee o2) -> o1.getFirstName().compareTo( o2.getFirstName() );
+                               
+//3>Comparator<Employee> compareByLastName = (Employee o1, Employee o2) -> o1.getLastName().compareTo( o2.getLastName() );
+
 class Students implements Comparable<Students>{
 	private Integer id;
 	
