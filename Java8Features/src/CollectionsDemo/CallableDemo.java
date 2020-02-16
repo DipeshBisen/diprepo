@@ -32,7 +32,8 @@ public class CallableDemo {
 
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
 		// TODO Auto-generated method stub
-		MyClass[] jobs= {new MyClass(),
+		MyClass[] jobs= {
+				new MyClass(),
 				new MyClass(),
 				new MyClass()
 		};
