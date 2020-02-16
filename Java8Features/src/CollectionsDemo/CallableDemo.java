@@ -14,14 +14,11 @@ class MyClass implements Callable<Integer>{
 	public Integer call() throws Exception {
 		// TODO Auto-generated method stub
 		int sum=0;
-		
 		for(int i=1;i<=5;i++) {
 			System.out.println("Thread "+ Thread.currentThread().getName()+ "  Count: "+i);
-			Thread.sleep(50);
+			Thread.sleep(400);
 			sum=sum+i;
 		}
-		
-		
 		return sum;
 	}
 	
@@ -38,7 +35,7 @@ public class CallableDemo {
 				new MyClass()
 		};
 		
-		ExecutorService pool=Executors.newFixedThreadPool(2);
+		ExecutorService pool=Executors.newFixedThreadPool(1);
 		
 		Set<Future<Integer>> results=new HashSet<Future<Integer>>();
 		
@@ -50,6 +47,13 @@ public class CallableDemo {
 			results.add(f);
 			
 		}
+		
+		for (Future<Integer> fobj: results) {
+			
+			if(!fobj.isDone())
+				System.out.println("Result is not done!!!!");
+		}
+		
 		
 		for (Future<Integer> fobj: results) {
 			

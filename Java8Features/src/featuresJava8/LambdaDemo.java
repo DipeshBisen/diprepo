@@ -12,6 +12,11 @@ public class LambdaDemo {
 		MyInterface i=()->System.out.println("Hello............Lambda with Functional Interface");
 		i.m1();
 
+		Runnable r=()->{
+			System.out.println("nothing");
+			System.out.println("nothing again");
+		};
+		
 	}
 
 }
